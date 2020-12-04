@@ -3,7 +3,8 @@
     <label for="search">Enter City Name</label>
 </div>
 <div>
-    <input (input)="justPrint($event.target.value)" id="search"/>
+    <input  id="search"/>
 </div>
-<button type="button">Let's Search</button>
+<button type="button" (click)="justPrint()">Let's Search</button>
 </div>
+{{ latestInfo.weather | json}}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForecastService } from '../forecast.service';
 
 @Component({
   selector: 'app-main',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 searchTerm: string= '';
-  constructor() { }
+latestInfo;
+  constructor(private forecastService: ForecastService) { }
 
   ngOnInit(): void {
   }
 
-  justPrint(value){
-    console.log(value);
+  justPrint(){
+    console.log('value');
+    this.forecastService.info('mumbai').subscribe((res) => {
+      this.latestInfo = res;
+      console.log(this.latestInfo);
+    });
   }
 
 }
