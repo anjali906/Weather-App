@@ -7,4 +7,11 @@
 </div>
 <button type="button" (click)="justPrint()">Let's Search</button>
 </div>
-{{ latestInfo.weather | json}}
+<!-- {{latestInfo | json}} -->
+
+<div *ngIf="latestInfo">
+{{ latestInfo.weather[0] | json }}
+<br>
+<label for="description"> Description </label>
+<div id="description"> {{ latestInfo.weather[0].description }}</div>
+</div>
