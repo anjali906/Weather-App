@@ -1,17 +1,22 @@
 <div>
-<div>
-    <label for="search">Enter City Name</label>
+    <div>
+        <label for="search">Enter City Name</label>
+    </div>
+    <div>
+        <input id="search" (input)="searchTerm = $event.target.value" />
+    </div>
+    <button type="button" (click)="justPrint()">Let's Search</button>
 </div>
-<div>
-    <input  id="search"/>
-</div>
-<button type="button" (click)="justPrint()">Let's Search</button>
-</div>
-<!-- {{latestInfo | json}} -->
-
 <div *ngIf="latestInfo">
-{{ latestInfo.weather[0] | json }}
-<br>
-<label for="description"> Description </label>
-<div id="description"> {{ latestInfo.weather[0].description }}</div>
+    <div>
+        <label for="description"> Description </label>
+        <span id="description"> {{ latestInfo.weather[0].description }}</span>
+        <label for="main"> Main </label>
+        <span id="main"> {{ latestInfo.weather[0].main }}</span>
+    </div>
+    <div>
+        <label for="humidity"> Humidity </label>
+        <span id="humidity"> {{ latestInfo.main.humidity }}</span>
+    </div>
+
 </div>

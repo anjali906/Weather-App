@@ -15,8 +15,7 @@ latestInfo;
   }
 
   justPrint(){
-    console.log('value');
-    this.forecastService.info('mumbai').subscribe((res) => {
+    this.forecastService.info(this.searchTerm).subscribe((res) => {
       this.latestInfo = res;
       console.log(this.latestInfo);
     });
