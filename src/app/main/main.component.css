@@ -1,6 +1,26 @@
-.large{
-    background-image: url("/assets/weather.jpg");
+.container{
+    background: url("/assets/weather.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
+    height: 100vh;
+    
+    
+}
+.ui.input{
+    margin: 10%;
+    margin-left: 35%;
+    margin-top: 8%;
+}
+
+.ui.card{
+    margin-left:25%;
+    width: 50%;
+}
+.first{
+    text-decoration:underline;
+    
+}
+.meta{
+    text-transform: uppercase;
 }
