@@ -1,45 +1,56 @@
 <div class="container">
-            <div class="ui labeled input">
-                <div class="ui label">
-                 City Name:
-                </div>
-                <input id="search" type="text" (input)="searchTerm = $event.target.value" placeholder="Enter City Name"/>
-                <button class="ui secondary button" type="button" (click)="justPrint()">Let's Search</button>
-              </div>
-            <!-- <label for="search">Enter City:</label>
+    <div class="ui labeled input">
+        <div class="ui label">
+            City Name:
+        </div>
+        <input id="search" type="text" (input)="searchTerm = $event.target.value" placeholder="Enter City Name" />
+        <button class="ui secondary button" type="button" (click)="justPrint()">Let's Search</button>
+    </div>
+    <!-- <label for="search">Enter City:</label>
             <div>
                 <input id="search" (input)="searchTerm = $event.target.value" />
             </div> -->
-            
-        
-
-
 
     <div *ngIf="latestInfo">
         <div class="ui card">
             <div class="content">
-                <a class="header first">Weather Report</a>
-                <div class="meta">
-                    <span class="header">{{searchTerm}}</span>
+                <div class="ui grid">
+                    <div class="four wide column">
+                        <span class="header first">Weather Report</span>
+                        <span class="pop">{{searchTerm}}</span>
+                    </div>
+                    <div class="four wide column">
+                        <label>Description</label>
+                        <p class="description">
+                            {{ latestInfo.weather[0].description }}
+                        </p>
+                    </div>
+                    </div>
+                    
+                
+                
+                
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <label for="humidity"> Humidity </label>
+                        <p id="humidity"> {{ latestInfo.main.humidity }}</p>
+                    </div>
+                    <div class="six wide column">
+                        <label for="pressure"> Pressure </label>
+                        <p id="pressure"> {{ latestInfo.main.pressure }}</p>
+                    </div>
                 </div>
-                <div class="description">
-                    {{ latestInfo.weather[0].description }}
+
+                <div class="ui grid">
+                    <div class="six wide column">
+                <label for="maxtemp"> Maximum Temperature </label>
+                <p id="maxtemp"> {{ latestInfo.main.temp_max }}</p>
                 </div>
-            </div>
-            <div class="extra content">
-                {{latestInfo.main.humidity}}
+                <div class="six wide column">
+                <label for="mintemp"> Minimum Temperature </label>
+                <p id="mintemp"> {{ latestInfo.main.temp_min }}</p>
+                </div>
             </div>
         </div>
-        <!-- <div>
-        <label for="description"> Description </label>
-        <span id="description"> {{ latestInfo.weather[0].description }}</span>
-        <label for="main"> Main </label>
-        <span id="main"> {{ latestInfo.weather[0].main }}</span>
-    </div>
-    <div>
-        <label for="humidity"> Humidity </label>
-        <span id="humidity"> {{ latestInfo.main.humidity }}</span>
-    </div> -->
-
     </div>
 </div>

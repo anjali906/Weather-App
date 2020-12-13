@@ -14,18 +14,28 @@
 }
 
 .ui.card{
-    margin-left:25%;
-    width: 50%;
-    color: #fff;
-    opacity: 0.6;
+    margin-left:28%;
+    width: 45%;
+    background: rgba(224, 221, 221, 0.596)
+    /* opacity: 0.7; */
 }
-.first{
+a.header{
     text-decoration:underline;
-    
+    width:180px
 }
 .meta{
     text-transform: uppercase;
+    
 }
 #search{
     font-weight: 600;
+}
+.header{
+    font-size: 20px;
+    font-weight: 400;
+}
+.ui.grid{
+    margin-left: 20%;
+    font-size: 18px;
+    font-weight: 500;
 }
