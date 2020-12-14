@@ -4,8 +4,7 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
     height: 100vh;
-    
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 }
 .ui.input{
     margin: 10%;
@@ -15,7 +14,7 @@
 
 .ui.card{
     margin-left:28%;
-    width: 45%;
+    width: 40%;
     background: rgba(224, 221, 221, 0.596)
     /* opacity: 0.7; */
 }
@@ -27,15 +26,40 @@ a.header{
     text-transform: uppercase;
     
 }
+.header{
+    margin: 20px;
+    display: block;
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+    font-size: 20px;
+}
+.pop {
+    
+    font-size: 18px;
+    color: rgb(6, 9, 56);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+#heading{
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-left: 24%;
+}
+label{
+    text-decoration: underline;
+    font-weight: 400;
+}
 #search{
     font-weight: 600;
 }
-.header{
-    font-size: 20px;
-    font-weight: 400;
+.ui.labeled.input{
+    font-size: 16px;
 }
 .ui.grid{
-    margin-left: 20%;
+    margin-left: 10%;
     font-size: 18px;
     font-weight: 500;
+    margin-top: 10px;
+    color: rgb(6, 9, 56);
 }
